@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+body {
+    background: #F88379 url('images/bg-intro-desktop.png') no-repeat center center/cover;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: 'Poppins', sans-serif;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    width: 800px;
+    position: relative;
+    z-index: 1; 
+}
+
+.container::before {
+    content: "";
+    position: absolute;
+    background-color: #F88379;
+    z-index: 0; 
+    opacity: 0.3; 
+}
+
+.container-left {
+    color: #fff;
+    line-height: 1.5;
+    font-family: 'Poppins', sans-serif;
+    width: 50%;
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+.container-right {
+    width: 50%;
+}
+
+.first-row {
+    color: #fff;
+    background-color: #7B68EE;
+    padding: 20px 10px;
+    text-align: center;
+    border-radius: 0.5em;
+}
+
+.bold-text {
+    font-weight: bold;
+}
+
+.light-text {
+    font-weight: lighter;
+}
+
+form {
+    width: 100%;
+    background-color: #fff;
+    margin-top: 1rem;
+    border-radius: 0.5rem;
+    padding: 10px 20px;
+    box-sizing: border-box;
+}
+
+form .row input {
+    width: calc(100% - 40px);
+    margin: 10px 20px;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+
+button {
+    width: calc(100% - 40px);
+    margin: 10px 20px;
+    background-color: hsl(154, 59%, 51%);
+    padding: 15px 20px;
+    border: none;
+    border-radius: 0.5rem;
+}
+
+.submit-btn {
+    text-transform: uppercase;
+    color: #fff;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.grey-text {
+    font-size: 0.6rem;
+    margin-left: 3rem;
+}
+
+.red-text {
+    color: hsl(0, 100%, 74%);
+}
+
+.container-right span {
+    display: block; 
+    width: 100%;
+    text-align: center; 
+    margin: 0; 
+}
+
+@media (max-width: 750px) {
+    .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 90%;
+        padding: 10px;
+        box-sizing: border-box;
+    }
+    .container-left, .container-right {
+        width: 100%;
+    }
+    h1 {
+        font-size: 30px;
+        text-align: center;
+    }
+    p {
+        text-align: center;
+    }
+    form .row input, button {
+        width: calc(100% - 40px);
+        margin: 10px 20px;
+        padding: 10px;
+    }
+}
